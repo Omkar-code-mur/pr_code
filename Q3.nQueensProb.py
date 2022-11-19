@@ -1,4 +1,3 @@
-
 def solveNQueens(n):
     state = [["_ "] * n for _ in range(n)]  # start with empty board
     res = []
@@ -35,11 +34,14 @@ def solveNQueens(n):
 
 
 def display(res):
-        for i in res:
-            for j in i:
-                print(j)
-            print()
+    count = 0
+    for i in res:
+        for j in i:
+            print(j)
+        print()
+        count+=1
+    print(f"{count} solutions found.")
+
 
 display(solveNQueens(8))
-display(solveNQueens(4))
 
